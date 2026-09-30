@@ -12,16 +12,21 @@ theme:
     - toc.integrate
     - content.code.copy
   palette:
-    - scheme: default
-      primary: teal
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - scheme: slate
-      primary: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
@@ -56,3 +61,9 @@ nav:
       - Scenario 5 - Cluster Expansion: ism-ahv/scenario-5-cluster-expansion.md
       - Scenario 6 - Prism Central 2022: ism-ahv/scenario-6-prism-central-2022.md
       - What's Next: ism-ahv/whats-next.md
+  - Cisco Unified Edge:
+      - Overview: unified-edge/index.md
+      - Environment: unified-edge/environment.md
+      - Get Started: unified-edge/getting-started.md
+      - Scenario 1: unified-edge/scenario-1.md
+      - Scenario 2: unified-edge/scenario-2.md

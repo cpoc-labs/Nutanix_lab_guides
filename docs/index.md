@@ -41,7 +41,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--md-primary-fg-color);
-  background: var(--md-primary-fg-color--transparent, rgba(0,150,136,0.12));
+  background: rgba(0, 188, 235, 0.14);
   padding: 0.2rem 0.6rem;
   border-radius: 1rem;
   margin-bottom: 0.75rem;
@@ -137,6 +137,16 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 - Optional: Prism Central 2022 install
 
 [Start the ISM guide →](ism-ahv/index.md){ .cpoc-btn }
+</div>
+
+<div class="cpoc-card" markdown>
+<span class="cpoc-tag">In progress</span>
+
+## Cisco Unified Edge
+
+<p class="cpoc-desc">A new CPOC guide for Cisco Unified Edge is being drafted. Check back soon for the full set of scenarios.</p>
+
+[View placeholder →](unified-edge/index.md){ .cpoc-btn }
 </div>
 
 </div>
