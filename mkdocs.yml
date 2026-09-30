@@ -1,0 +1,58 @@
+site_name: Cisco + Nutanix CPOC Guides
+site_description: Customer Proof of Concept lab guides for Nutanix on Cisco UCS via Intersight
+site_author: Esteban Arguedas
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Intersight Managed Mode (IMM):
+      - Overview: imm-ahv/index.md
+      - Environment: imm-ahv/environment.md
+      - Get Started: imm-ahv/getting-started.md
+      - Scenario 1 - Claim Servers: imm-ahv/scenario-1-claim-servers.md
+      - Scenario 2 - API Key Generation: imm-ahv/scenario-2-api-key-generation.md
+      - Scenario 3 - Foundation Central: imm-ahv/scenario-3-foundation-central.md
+      - Scenario 4 - Cluster Deployment: imm-ahv/scenario-4-cluster-deployment.md
+      - Scenario 5 - Prism Central: imm-ahv/scenario-5-prism-central.md
+      - Scenario 6 - Cluster Expansion: imm-ahv/scenario-6-cluster-expansion.md
+      - What's Next: imm-ahv/whats-next.md
+  - Intersight Standalone Mode (ISM):
+      - Overview: ism-ahv/index.md
+      - Environment: ism-ahv/environment.md
+      - Get Started: ism-ahv/getting-started.md
+      - Scenario 1 - Claim Servers: ism-ahv/scenario-1-claim-servers.md
+      - Scenario 2 - Foundation Central: ism-ahv/scenario-2-foundation-central.md
+      - Scenario 3 - Cluster Deployment: ism-ahv/scenario-3-cluster-deployment.md
+      - Scenario 4 - Prism Central: ism-ahv/scenario-4-prism-central.md
+      - Scenario 5 - Cluster Expansion: ism-ahv/scenario-5-cluster-expansion.md
+      - Scenario 6 - Prism Central 2022: ism-ahv/scenario-6-prism-central-2022.md
+      - What's Next: ism-ahv/whats-next.md
