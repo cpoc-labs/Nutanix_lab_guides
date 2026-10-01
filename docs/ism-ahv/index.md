@@ -4,6 +4,8 @@
 
 **Author:** Esteban Arguedas (eargueda@cisco.com) · **Version:** 1.0 · **Last updated:** 12 March 2026
 
+[Download this guide as PDF](ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn download }
+
 !!! note "Document status"
     All printed copies and duplicate soft copies of this document are considered uncontrolled. Please refer to the original, online document link for the current version.
 

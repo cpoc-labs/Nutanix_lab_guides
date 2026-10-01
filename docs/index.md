@@ -74,19 +74,6 @@
 .cpoc-stats strong {
   color: var(--md-default-fg-color);
 }
-.cpoc-btn {
-  display: inline-block;
-  text-align: center;
-  padding: 0.55rem 1rem;
-  border-radius: 0.3rem;
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color) !important;
-  font-weight: 600;
-  text-decoration: none !important;
-}
-.cpoc-btn:hover {
-  filter: brightness(1.08);
-}
 .cpoc-footer {
   text-align: center;
   color: var(--md-default-fg-color--light);
@@ -118,7 +105,10 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 - Deploy AHV/ESX cluster &amp; Prism Central
 - Expand the cluster
 
+<div class="cpoc-btn-row" markdown>
 [Start the IMM guide →](imm-ahv/index.md){ .cpoc-btn }
+[PDF](imm-ahv/IMM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+</div>
 </div>
 
 <div class="cpoc-card" markdown>
@@ -136,7 +126,10 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 - Expand the cluster
 - Optional: Prism Central 2022 install
 
+<div class="cpoc-btn-row" markdown>
 [Start the ISM guide →](ism-ahv/index.md){ .cpoc-btn }
+[PDF](ism-ahv/ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+</div>
 </div>
 
 <div class="cpoc-card" markdown>

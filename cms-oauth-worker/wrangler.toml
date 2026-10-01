@@ -1,7 +1,0 @@
-name = "cpoc-cms-oauth"
-main = "worker.js"
-compatibility_date = "2024-01-01"
-
-# Set the two secrets after first deploy:
-#   wrangler secret put GITHUB_CLIENT_ID
-#   wrangler secret put GITHUB_CLIENT_SECRET

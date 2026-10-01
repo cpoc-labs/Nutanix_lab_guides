@@ -27,3 +27,31 @@
   --md-footer-bg-color: #04121f;
   --md-footer-bg-color--dark: #030d17;
 }
+
+/* Reusable call-to-action button, e.g. [Download PDF](...){ .cpoc-btn } */
+.cpoc-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.55rem 1rem;
+  border-radius: 0.3rem;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+.cpoc-btn:hover {
+  filter: brightness(1.08);
+}
+.cpoc-btn--outline {
+  background: transparent;
+  color: var(--md-primary-fg-color) !important;
+  border: 1px solid var(--md-primary-fg-color);
+}
+.cpoc-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.cpoc-btn-row .cpoc-btn:first-child {
+  flex: 1;
+}
