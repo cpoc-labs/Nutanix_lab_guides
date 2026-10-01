@@ -144,6 +144,18 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 </div>
 
+<div class="cpoc-cta" markdown>
+<div class="cpoc-cta-logos">
+<img src="assets/cisco-logo.png" alt="Cisco">
+<img src="assets/cpoc-logo.png" alt="Customer Proof of Concept">
+</div>
+
+<div class="cpoc-btn-row" markdown>
+[Start the Lab](imm-ahv/getting-started.md){ .cpoc-btn }
+[Convert to PDF](imm-ahv/IMM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+</div>
+</div>
+
 <div class="cpoc-footer" markdown>
 *Cisco Global Demo Engineering — Esteban Arguedas ([eargueda@cisco.com](mailto:eargueda@cisco.com))*
 </div>

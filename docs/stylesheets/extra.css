@@ -55,3 +55,32 @@
 .cpoc-btn-row .cpoc-btn:first-child {
   flex: 1;
 }
+
+/* Bottom "Start the Lab" / "Convert to PDF" call-to-action bar */
+.cpoc-cta {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  text-align: center;
+}
+.cpoc-cta-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: #ffffff;
+  width: fit-content;
+  padding: 0.9rem 1.75rem;
+  border-radius: 0.5rem;
+  margin: 0 auto 1.5rem;
+}
+.cpoc-cta-logos img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.cpoc-cta .cpoc-btn-row {
+  max-width: 26rem;
+  margin: 0 auto;
+}

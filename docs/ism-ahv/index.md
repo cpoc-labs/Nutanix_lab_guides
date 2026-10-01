@@ -4,7 +4,9 @@
 
 **Author:** Esteban Arguedas (eargueda@cisco.com) · **Version:** 1.0 · **Last updated:** 12 March 2026
 
+<!-- pdf:skip:start -->
 [Download this guide as PDF](ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn download }
+<!-- pdf:skip:end -->
 
 !!! note "Document status"
     All printed copies and duplicate soft copies of this document are considered uncontrolled. Please refer to the original, online document link for the current version.
@@ -55,3 +57,17 @@ All printed copies and duplicate soft copies are not considered controlled; ther
 | Revision | Date | Author | Description | Version |
 |---|---|---|---|---|
 | 1 | 12 March 2026 | Arguedas | Intersight – Nutanix ISM use cases | 1.0 |
+
+<!-- pdf:skip:start -->
+<div class="cpoc-cta" markdown>
+<div class="cpoc-cta-logos">
+<img src="../assets/cisco-logo.png" alt="Cisco">
+<img src="../assets/cpoc-logo.png" alt="Customer Proof of Concept">
+</div>
+
+<div class="cpoc-btn-row" markdown>
+[Start the Lab](getting-started.md){ .cpoc-btn }
+[Convert to PDF](ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+</div>
+</div>
+<!-- pdf:skip:end -->

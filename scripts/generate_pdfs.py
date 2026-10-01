@@ -165,6 +165,13 @@ def strip_cover_duplicate_lines(text):
     return "\n".join(lines)
 
 
+def strip_pdf_skip_blocks(text):
+    """Pages can wrap web-only UI (e.g. the "Convert to PDF" button itself,
+    which is meaningless inside the PDF it points to) in
+    <!-- pdf:skip:start --> ... <!-- pdf:skip:end --> so it's excluded here."""
+    return re.sub(r"<!--\s*pdf:skip:start\s*-->.*?<!--\s*pdf:skip:end\s*-->", "", text, flags=re.DOTALL)
+
+
 def rewrite_internal_links(text):
     def repl(m):
         label, target = m.group(1), m.group(2)
@@ -192,6 +199,7 @@ def build_content_html(guide_dir, pages):
         text = md_path.read_text(encoding="utf-8")
         if Path(path).name == "index.md":
             text = strip_cover_duplicate_lines(text)
+        text = strip_pdf_skip_blocks(text)
         text = rewrite_internal_links(text)
         body_html = markdown.markdown(text, extensions=MD_EXTENSIONS, output_format="html5")
         sections.append(f'<section class="page" id="{slugify(path)}">{body_html}</section>')
