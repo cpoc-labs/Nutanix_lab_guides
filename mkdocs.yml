@@ -4,6 +4,8 @@ site_author: Esteban Arguedas
 
 theme:
   name: material
+  logo: assets/cpoc-logo.png
+  favicon: assets/cpoc-logo.ico
   features:
     - navigation.tabs
     - navigation.sections
