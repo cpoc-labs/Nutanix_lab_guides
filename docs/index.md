@@ -99,11 +99,11 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 <div class="cpoc-stats"><span><strong>6</strong> scenarios</span><span><strong>163</strong> screenshots</span></div>
 
-- Claim servers &amp; build domain profiles
+<!-- - Claim servers &amp; build domain profiles
 - Generate Intersight API keys
 - Onboard nodes in Foundation Central
 - Deploy AHV/ESX cluster &amp; Prism Central
-- Expand the cluster
+- Expand the cluster -->
 
 <div class="cpoc-btn-row" markdown>
 [Start the IMM guide →](imm-ahv/index.md){ .cpoc-btn }
