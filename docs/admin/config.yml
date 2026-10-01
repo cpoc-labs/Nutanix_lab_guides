@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: cpoc-labs/Nutanix_lab_guides
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+  auth_endpoint: auth
+
+# Saves commit straight to `main` (no draft/review queue), so edits go live
+# as soon as the "Deploy MkDocs site to Pages" workflow finishes running.
+publish_mode: simple
+
+media_folder: "docs/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "imm_ahv"
+    label: "Intersight Managed Mode (IMM)"
+    folder: "docs/imm-ahv"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "images"
+    public_folder: "images"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "ism_ahv"
+    label: "Intersight Standalone Mode (ISM)"
+    folder: "docs/ism-ahv"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "images"
+    public_folder: "images"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "unified_edge"
+    label: "Cisco Unified Edge"
+    folder: "docs/unified-edge"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "images"
+    public_folder: "images"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
