@@ -2,7 +2,7 @@
 
 *Cisco Global Demo Engineering Customer Proof of Concept*
 
-**Author:** Esteban Arguedas (eargueda@cisco.com) · **Version:** 1.0 · **Last updated:** 12 March 2026
+**Author:** Esteban Arguedas (eargueda@cisco.com) · **Version:** 2.0 · **Last updated:** 1 October 2026
 
 <!-- pdf:skip:start -->
 [Download this guide as PDF](ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn download }
@@ -40,7 +40,7 @@ After completing these scenarios, you will know how to claim, deploy and configu
 | [Scenario 3](scenario-3-cluster-deployment.md) | Nutanix Cluster Deployment with AHV or ESX Hypervisor |
 | [Scenario 4](scenario-4-prism-central.md) | Nutanix Prism Central deployment and Cluster registration |
 | [Scenario 5](scenario-5-cluster-expansion.md) | Nutanix Cluster Expansion |
-| [Scenario 6](scenario-6-prism-central-2022.md) | Nutanix Prism Central 2022 installation (Optional) |
+
 
 See the [Environment](environment.md) page for lab IP addresses, credentials and equipment, and [Get Started](getting-started.md) to begin.
 
@@ -57,6 +57,7 @@ All printed copies and duplicate soft copies are not considered controlled; ther
 | Revision | Date | Author | Description | Version |
 |---|---|---|---|---|
 | 1 | 12 March 2026 | Arguedas | Intersight – Nutanix ISM use cases | 1.0 |
+| 2 | 1 october 2026 | Arguedas | Intersight – Nutanix ISM use cases | 2.0 |
 
 <!-- pdf:skip:start -->
 <div class="cpoc-cta" markdown>

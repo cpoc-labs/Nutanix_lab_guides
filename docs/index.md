@@ -82,6 +82,12 @@
 }
 </style>
 
+<div class="cpoc-cta" markdown>
+<div class="cpoc-cta-logos">
+<img src="assets/cisco-logo.png" alt="Cisco">
+<img src="assets/cpoc-logo.png" alt="Customer Proof of Concept">
+</div>
+
 <div class="cpoc-hero" markdown>
 # Cisco + Nutanix CPOC Guides
 
@@ -120,11 +126,11 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 <div class="cpoc-stats"><span><strong>6</strong> scenarios</span><span><strong>155</strong> screenshots</span></div>
 
-- Claim servers in Cisco Intersight
+<!-- - Claim servers in Cisco Intersight
 - Onboard nodes in Foundation Central
 - Deploy AHV/ESX cluster &amp; Prism Central
 - Expand the cluster
-- Optional: Prism Central 2022 install
+- Optional: Prism Central 2022 install -->
 
 <div class="cpoc-btn-row" markdown>
 [Start the ISM guide →](ism-ahv/index.md){ .cpoc-btn }
@@ -133,28 +139,26 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 </div>
 
 <div class="cpoc-card" markdown>
-<span class="cpoc-tag">In progress</span>
+<span class="cpoc-tag">Cloud-managed</span>
 
-## Cisco Unified Edge
+## Intersight Unified Edge
 
 <p class="cpoc-desc">A new CPOC guide for Cisco Unified Edge is being drafted. Check back soon for the full set of scenarios.</p>
 
-[View placeholder →](unified-edge/index.md){ .cpoc-btn }
-</div>
-
-</div>
-
-<div class="cpoc-cta" markdown>
-<div class="cpoc-cta-logos">
-<img src="assets/cisco-logo.png" alt="Cisco">
-<img src="assets/cpoc-logo.png" alt="Customer Proof of Concept">
-</div>
-
 <div class="cpoc-btn-row" markdown>
+[Start the Unified Edge→](unified-edge/index.md){ .cpoc-btn }
+</div>
+
+
+</div>
+
+
+
+<!-- <div class="cpoc-btn-row" markdown>
 [Start the Lab](imm-ahv/getting-started.md){ .cpoc-btn }
 [Convert to PDF](imm-ahv/IMM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
 </div>
-</div>
+</div> -->
 
 <div class="cpoc-footer" markdown>
 *Cisco Global Demo Engineering — Esteban Arguedas ([eargueda@cisco.com](mailto:eargueda@cisco.com))*

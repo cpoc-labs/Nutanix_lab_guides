@@ -1,7 +1,7 @@
 # Scenario 5 · Nutanix Cluster Expansion
 
 
-1. Return to the new Prism Central (add IP info here to make sure users will go to PC 2024 and not PC 2022) and click on View in my Apps
+1. Return to the new Prism Central (add IP info here to make sure users will go to PC 7.5.1.1) and click on View in my Apps
 
 ![Screenshot](images/scenario-5-01.jpeg)
 
