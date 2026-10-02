@@ -216,60 +216,68 @@ def generate_guide_pdf(guide_dir, meta, nav):
     cover_pdf_path = out_dir / "_print_cover.pdf"
     content_pdf_path = out_dir / "_print_content.pdf"
 
-    cover_html_path.write_text(COVER_TEMPLATE.format(**meta), encoding="utf-8")
+    temp_paths = (cover_html_path, content_html_path, cover_pdf_path, content_pdf_path)
+    try:
+        # Always rebuilt from the current markdown below, so a stale PDF can
+        # never linger: there is no cache or "already generated" check to
+        # bypass - rerunning this script is the only way to get a PDF at all.
+        cover_html_path.write_text(COVER_TEMPLATE.format(**meta), encoding="utf-8")
 
-    toc_html = build_toc_html(pages)
-    body_html = build_content_html(guide_dir, pages)
-    content_html_path.write_text(
-        f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{CONTENT_CSS}</style></head>"
-        f"<body>{toc_html}{body_html}</body></html>",
-        encoding="utf-8",
-    )
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-
-        cover_page = browser.new_page()
-        cover_page.goto(cover_html_path.resolve().as_uri())
-        cover_page.emulate_media(media="print")
-        cover_page.pdf(path=str(cover_pdf_path), format="Letter", print_background=True)
-        cover_page.close()
-
-        content_page = browser.new_page()
-        content_page.goto(content_html_path.resolve().as_uri())
-        content_page.emulate_media(media="print")
-        content_page.wait_for_timeout(300)
-        content_page.pdf(
-            path=str(content_pdf_path),
-            format="Letter",
-            print_background=True,
-            display_header_footer=True,
-            header_template=(
-                '<div style="font-family:Arial,Helvetica,sans-serif; font-size:8px; '
-                'width:100%; text-align:center; color:#7a8894; padding-top:4px;">'
-                "Cisco Global Demo Engineering Customer Proof of Concept</div>"
-            ),
-            footer_template=(
-                '<div style="font-family:Arial,Helvetica,sans-serif; font-size:8px; '
-                'width:100%; text-align:center; color:#7a8894;">'
-                "Cisco &copy; 2025. All Rights Reserved. &nbsp; "
-                '<span class="pageNumber"></span></div>'
-            ),
-            margin={"top": "70px", "bottom": "50px", "left": "0", "right": "0"},
+        toc_html = build_toc_html(pages)
+        body_html = build_content_html(guide_dir, pages)
+        content_html_path.write_text(
+            f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{CONTENT_CSS}</style></head>"
+            f"<body>{toc_html}{body_html}</body></html>",
+            encoding="utf-8",
         )
-        content_page.close()
-        browser.close()
 
-    writer = PdfWriter()
-    for src in (cover_pdf_path, content_pdf_path):
-        reader = PdfReader(str(src))
-        for p_ in reader.pages:
-            writer.add_page(p_)
-    with open(pdf_path, "wb") as f:
-        writer.write(f)
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            try:
+                cover_page = browser.new_page()
+                cover_page.goto(cover_html_path.resolve().as_uri())
+                cover_page.emulate_media(media="print")
+                cover_page.pdf(path=str(cover_pdf_path), format="Letter", print_background=True)
+                cover_page.close()
 
-    for tmp in (cover_html_path, content_html_path, cover_pdf_path, content_pdf_path):
-        tmp.unlink(missing_ok=True)
+                content_page = browser.new_page()
+                content_page.goto(content_html_path.resolve().as_uri())
+                content_page.emulate_media(media="print")
+                content_page.wait_for_timeout(300)
+                content_page.pdf(
+                    path=str(content_pdf_path),
+                    format="Letter",
+                    print_background=True,
+                    display_header_footer=True,
+                    header_template=(
+                        '<div style="font-family:Arial,Helvetica,sans-serif; font-size:8px; '
+                        'width:100%; text-align:center; color:#7a8894; padding-top:4px;">'
+                        "Cisco Global Demo Engineering Customer Proof of Concept</div>"
+                    ),
+                    footer_template=(
+                        '<div style="font-family:Arial,Helvetica,sans-serif; font-size:8px; '
+                        'width:100%; text-align:center; color:#7a8894;">'
+                        "Cisco &copy; 2025. All Rights Reserved. &nbsp; "
+                        '<span class="pageNumber"></span></div>'
+                    ),
+                    margin={"top": "70px", "bottom": "50px", "left": "0", "right": "0"},
+                )
+                content_page.close()
+            finally:
+                browser.close()
+
+        writer = PdfWriter()
+        for src in (cover_pdf_path, content_pdf_path):
+            reader = PdfReader(str(src))
+            for p_ in reader.pages:
+                writer.add_page(p_)
+        with open(pdf_path, "wb") as f:
+            writer.write(f)
+    finally:
+        # Clean up temp files even if generation failed partway, so a failed
+        # run never leaves stale artifacts that could confuse the next one.
+        for tmp in temp_paths:
+            tmp.unlink(missing_ok=True)
 
     print(f"Generated {pdf_path} ({pdf_path.stat().st_size // 1024} KB)")
 

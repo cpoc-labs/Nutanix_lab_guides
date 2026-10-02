@@ -11,6 +11,7 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.indexes
+    - navigation.footer
     - toc.integrate
     - content.code.copy
   palette:
