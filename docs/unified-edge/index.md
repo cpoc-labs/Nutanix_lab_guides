@@ -16,7 +16,7 @@ After completing these scenarios, you will know how to claim, deploy and configu
 | Scenario | Description |
 |---|---|
 | [Scenario 1](scenario-1.md) | Configure Hardware Provider|
-| [Scenario 2](scenario-2.md) | *TODO* |
+| [Scenario 2](scenario-2.md) | Nutanix Cluster Deployment with AHV or ESX Hypervisor|
 
 See the [Environment](environment.md) page for lab IP addresses, credentials and equipment, and [Get Started](getting-started.md) to begin.
 
