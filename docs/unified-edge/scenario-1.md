@@ -95,3 +95,10 @@ Select to onboard Via Hardware Provider, then select Cisco-Intersight from the d
 
  ![Screenshot](images/scenario-1-18.png)
 
+Select all nodes on the left side and click next then click Onboard Nodes
+
+ ![Screenshot](images/scenario-1-19.png)
+ 
+Once the nodes are onboarded, you’ll see a example like this 
+
+ ![Screenshot](images/scenario-1-20.png)
