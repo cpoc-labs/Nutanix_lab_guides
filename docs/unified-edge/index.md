@@ -44,6 +44,6 @@ All printed copies and duplicate soft copies are not considered controlled; ther
 
 <div class="cpoc-btn-row" markdown>
 [Start the Lab](getting-started.md){ .cpoc-btn }
-[Convert to PDF](ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+[Convert to PDF](Unified-Edge-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
 </div>
 </div>

@@ -49,6 +49,15 @@ GUIDES = {
         "email": "eargueda@cisco.com",
         "pdf_name": "ISM-AHV-CPOC-Guide.pdf",
     },
+    "unified-edge": {
+        "nav_label": "Cisco Unified Edge",
+        "title": "Cisco Unified Edge",
+        "subtitle": "Nutanix Unified Edge",
+        "date": "1 October 2026",
+        "author": "Esteban Arguedas",
+        "email": "eargueda@cisco.com",
+        "pdf_name": "Unified-Edge-CPOC-Guide.pdf",
+    },
 }
 
 COVER_TEMPLATE = """<!DOCTYPE html>
