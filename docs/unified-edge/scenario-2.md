@@ -55,3 +55,4 @@ complete. With firmware upgrades/downgrades it is common to take an additional 6
 Return to Intersight, under Operate select Servers to check the Server Profile provisioning progress.
 
   ![Screenshot](images/scenario-2-11.png)
+
