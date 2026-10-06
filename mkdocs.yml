@@ -65,7 +65,6 @@ nav:
       - Scenario 3 - Cluster Deployment: ism-ahv/scenario-3-cluster-deployment.md
       - Scenario 4 - Prism Central: ism-ahv/scenario-4-prism-central.md
       - Scenario 5 - Cluster Expansion: ism-ahv/scenario-5-cluster-expansion.md
-      - Scenario 6 - Prism Central 2022: ism-ahv/scenario-6-prism-central-2022.md
       - What's Next: ism-ahv/whats-next.md
   - Cisco Unified Edge:
       - Overview: unified-edge/index.md

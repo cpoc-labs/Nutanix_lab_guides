@@ -124,7 +124,7 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 <p class="cpoc-desc">Deploy and manage Nutanix through an on-premises Intersight appliance, with no connection to Intersight cloud — ideal for secure, air-gapped, or compliance-driven environments.</p>
 
-<div class="cpoc-stats"><span><strong>6</strong> scenarios</span><span><strong>155</strong> screenshots</span></div>
+<div class="cpoc-stats"><span><strong>5</strong> scenarios</span><span><strong>128</strong> screenshots</span></div>
 
 <!-- - Claim servers in Cisco Intersight
 - Onboard nodes in Foundation Central
