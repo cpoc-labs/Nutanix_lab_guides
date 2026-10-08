@@ -27,9 +27,9 @@
 | Intersight cva | 198.18.128.252 | admin / C1sco12345 | Intersight |
 | VMware-ESXI | 198.18.128.250 | root / C1sco12345! | ESX 7.0 |
 | UE Cluster VIP | 198.18.137.2 | admin / C1sco12345 | |
-| ISM Prism Element virtual IP | 198.18.135.3 | admin / C1sco12345 | |
-| ISM Nutanix PC-2024 | 198.18.135.4 | admin / C1sco12345 | |
-| ISM Nutanix PC-2024 virtual IP | 198.18.135.5 | admin / C1sco12345 | |
+| UE Prism Element Data Service IP | 198.18.137.3 | admin / C1sco12345 | |
+| UE Nutanix PC-2024 | 198.18.135.4 | admin / C1sco12345 | |
+| UE Nutanix PC-2024 virtual IP | 198.18.135.5 | admin / C1sco12345 | |
 | UE IP Pool for cluster | 198.18.137.20-100 | | |
 
 ## Equipment – CPOC Lab

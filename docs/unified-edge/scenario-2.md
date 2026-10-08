@@ -56,3 +56,6 @@ Return to Intersight, under Operate select Servers to check the Server Profile p
 
   ![Screenshot](images/scenario-2-11.png)
 
+A successful installation will be like this example 
+
+  ![Screenshot](images/scenario-2-12.png)
