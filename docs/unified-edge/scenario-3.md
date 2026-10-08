@@ -1,4 +1,4 @@
-# Scenario 2 	Witness VM Installation and configuration
+# Scenario 3 	Witness VM Installation and configuration (Optional)
 
 A Witness VM is highly recommended for 2-node clusters or clusters configured for Metro Availability
 The witness VM makes failover decisions during network outages or site availability interruptions to avoid splitbrain
