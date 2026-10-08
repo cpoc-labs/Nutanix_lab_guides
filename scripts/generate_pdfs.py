@@ -9,14 +9,21 @@ the site from (in the order they appear in mkdocs.yml's nav), so there is
 nothing to keep in sync by hand - edit the guide, rerun this script.
 
 Usage:
-    python scripts/generate_pdfs.py
+    python scripts/generate_pdfs.py             # build static PDFs (offline use)
+    python scripts/generate_pdfs.py --manifest  # write docs/javascripts/guides.json
+
+The site's "PDF" buttons don't link to a prebuilt file: docs/javascripts/
+pdf-export.js builds the PDF in the browser on click, from the rendered pages,
+using the page list and cover metadata in guides.json (--manifest).
 
 Requires (see requirements.txt): markdown, pymdown-extensions, pyyaml,
 pypdf, playwright (with `playwright install chromium` run once).
 """
 
 import html
+import json
 import re
+import sys
 from pathlib import Path
 
 import markdown
@@ -291,8 +298,30 @@ def generate_guide_pdf(guide_dir, meta, nav):
     print(f"Generated {pdf_path} ({pdf_path.stat().st_size // 1024} KB)")
 
 
+def page_url(relpath):
+    """Site URL (relative to the site root) mkdocs serves a source page at."""
+    p = Path(relpath)
+    return f"{p.parent.as_posix()}/" if p.name == "index.md" else f"{p.with_suffix('').as_posix()}/"
+
+
+def write_manifest(nav):
+    manifest = {}
+    for guide_dir, meta in GUIDES.items():
+        pages = find_guide_pages(nav, meta["nav_label"])
+        manifest[guide_dir] = {
+            **{k: meta[k] for k in ("title", "subtitle", "date", "author", "email", "pdf_name")},
+            "pages": [{"label": label, "url": page_url(path)} for label, path in pages],
+        }
+    out = DOCS / "javascripts" / "guides.json"
+    out.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    print(f"Wrote {out}")
+
+
 def main():
     nav = load_nav()
+    if "--manifest" in sys.argv:
+        write_manifest(nav)
+        return
     for guide_dir, meta in GUIDES.items():
         generate_guide_pdf(guide_dir, meta, nav)
 

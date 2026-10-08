@@ -26,9 +26,11 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: playwright install --with-deps chromium
+      - name: Auto-fix nav entries for renamed pages
+        run: python scripts/fix_nav.py
 
-      - run: python scripts/generate_pdfs.py
+      - name: Write PDF guide manifest
+        run: python scripts/generate_pdfs.py --manifest
 
       - run: mkdocs build --strict
 

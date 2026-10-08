@@ -5,7 +5,7 @@
 **Author:** Esteban Arguedas (eargueda@cisco.com) · **Version:** 1.0 · **Last updated:** 12 March 2026
 
 <!-- pdf:skip:start -->
-[Download this guide as PDF](IMM-AHV-CPOC-Guide.pdf){ .cpoc-btn download }
+[Download this guide as PDF](#){ .cpoc-btn data-pdf-guide="imm-ahv" }
 <!-- pdf:skip:end -->
 
 !!! note "Document status"
@@ -67,7 +67,7 @@ All printed copies and duplicate soft copies are not considered controlled.
 
 <div class="cpoc-btn-row" markdown>
 [Start the Lab](getting-started.md){ .cpoc-btn }
-[Convert to PDF](IMM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+[Convert to PDF](#){ .cpoc-btn .cpoc-btn--outline data-pdf-guide="imm-ahv" }
 </div>
 </div>
 <!-- pdf:skip:end -->

@@ -33,6 +33,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/auth-gate.js
+  - javascripts/pdf-export.js
 
 markdown_extensions:
   - admonition
@@ -72,5 +73,5 @@ nav:
       - Get Started: unified-edge/getting-started.md
       - Scenario 1: unified-edge/scenario-1.md
       - Scenario 2: unified-edge/scenario-2.md
-      - Scenario 3 - Witness VM: unified-edge/scenario-3-witness.md
+      - Scenario 3 - Witness VM: unified-edge/scenario-3.md
       - Scenario 4 - Initial Cluster Configuration: unified-edge/scenario-4.md

@@ -113,7 +113,7 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 <div class="cpoc-btn-row" markdown>
 [Start the IMM guide →](imm-ahv/index.md){ .cpoc-btn }
-[PDF](imm-ahv/IMM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+[PDF](#){ .cpoc-btn .cpoc-btn--outline data-pdf-guide="imm-ahv" }
 </div>
 </div>
 
@@ -134,7 +134,7 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 <div class="cpoc-btn-row" markdown>
 [Start the ISM guide →](ism-ahv/index.md){ .cpoc-btn }
-[PDF](ism-ahv/ISM-AHV-CPOC-Guide.pdf){ .cpoc-btn .cpoc-btn--outline download }
+[PDF](#){ .cpoc-btn .cpoc-btn--outline data-pdf-guide="ism-ahv" }
 </div>
 </div>
 
