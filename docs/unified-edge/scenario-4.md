@@ -1,9 +1,17 @@
-# Scenario 4 	Initial Cluster Configuration
+# Scenario 4 	Witness VM Installation and configuration (Optional)
 
-This scenario will take you to the initial configuration required for the cluster
+A Witness VM is highly recommended for 2-node clusters or clusters configured for Metro Availability
+The witness VM makes failover decisions during network outages or site availability interruptions to avoid splitbrain
+scenarios.
+The witness VM must reside in a different failure domain from the clusters it is monitoring, meaning it has its own
+separate power and independent network communication to both monitored sites.
+
+Go to CIsco IMM Transition tool, see the bookmark or access 198.18.128.100 admin / C1sco12345, then select WitnessVM and download all content
+
+ ![Screenshot](images/scenario-3-01.png)
 
 
-On the recent created cluster and click on Deployment Configuration, there will see the Cluster VIP 198.18.137.2
+Return to the recent created cluster and click on Deployment Configuration, there will see the Cluster VIP 198.18.137.2
 
   ![Screenshot](images/scenario-3-02.png)
 
@@ -17,54 +25,65 @@ For Nutanix EULA fill the information, check the box and accept and continue
  Company= Cisco
  Job tile= UE
 
- ![Screenshot](images/scenario-3-04.png)
+  ![Screenshot](images/scenario-3-04.png)
 
-Click home at the top, then select storage, then + Storage Container, 
+Click home at the top, then select settigns, click on Image Configuration and + upload Image
 
-  ![Screenshot](images/scenario-4-01.png)
+  ![Screenshot](images/scenario-3-05.png)
 
+Fill the information of the new Image, 
+Name= Witness VM boot
+Image Type = DISK
+Storage Container = SelfServiceContainer
 
-Add a name DS-1, click Advanced Settings, under Reserved Capacity add 1000 GB, same as the Advertised Capacity 1000 GB and click Save
+click on Upload a file and click Browse and save
 
-  ![Screenshot](images/scenario-4-02.png)
+  ![Screenshot](images/scenario-3-06.png)
 
-Click table to view the new DS-1 storage
+Repeat the steps to load the data and home files
 
-  ![Screenshot](images/scenario-4-03.png)
+  ![Screenshot](images/scenario-3-07.png)
+  ![Screenshot](images/scenario-3-08.png)
+  ![Screenshot](images/scenario-3-09.png)
 
-At top dropdown menu, select Settings and click on Rebuild Capacity Reservation
+Deploy the Witness VM,
+Click at the top dropdown menu and select VM, click + create VM
 
-    !!!Note
-       Without this setting enabled, cluster will accept incoming writes even if all blocks cannot completely heal during failures.
-       
-       After enabling, cluster will refuse new writes if they cannot be fully protected during failures
+  ![Screenshot](images/scenario-3-10.png)
 
-  ![Screenshot](images/scenario-4-04.png)
+Add the name  Witness_VM_AHV, add 2 vCPUs 
 
-In the same settings menu, scroll up and click on Cluster Details and add the Data Service IP 198.18.137.3 and save
+  ![Screenshot](images/scenario-3-11.png)
 
- ![Screenshot](images/scenario-4-05.png)
+On memory add 6 Gb and select legacy BIOS 
 
-Then scroll down to Manage VM High Availability, check the box and save and click OK.
+  ![Screenshot](images/scenario-3-12.png)
 
-  ![Screenshot](images/scenario-4-06.png)
+Add all the three disk images as ISCI , clone from image service
+First Boot disk
+Second Home disk
+final Data disk
 
-Remediate all NCC Failures and Warnings
+  ![Screenshot](images/scenario-3-13.png)
+  ![Screenshot](images/scenario-3-14.png)
 
-  ![Screenshot](images/scenario-4-07.png)
+Now click on + Add New Nic, select Add Network 
 
-Go to Health, Run NCC Checks, click actions and run the checks
+  ![Screenshot](images/scenario-3-15.png)
 
-  ![Screenshot](images/scenario-4-08.png)
-  ![Screenshot](images/scenario-4-09.png)
+Create Subnet, Name VM_network, Virtul Switch vs0, Vlan ID 10, click Save 
 
-# Deploy and Register Cluster with Prism Central
+  ![Screenshot](images/scenario-3-16.png)
 
-These instructions assume the Prism Central
-instance or cluster used to deploy the Nutanix
-cluster will also be the one used long-term for
-management. If not, deploy a new Prism Central
-instance or cluster on the new Nutanix cluster, then
-register that cluster with the Prism Central instance
-running on itself.
+Click the x and the new subnet will be add to on the new NIC, then click add
+
+  ![Screenshot](images/scenario-3-17.png)
+
+Now save the new VM and boot
+
+  ![Screenshot](images/scenario-3-18.png)
+
+Click on table at the top left to view the new VM and power on
+ 
+  ![Screenshot](images/scenario-3-19.png)
 

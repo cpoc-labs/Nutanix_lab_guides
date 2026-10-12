@@ -149,12 +149,12 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 [Start the Unified Edge→](unified-edge/index.md){ .cpoc-btn }
 </div>
 
-</div>
+</div> 
 
 </div>
 
 <div class="cpoc-footer" markdown>
-*Cisco Global Demo Engineering — Esteban Arguedas ([eargueda@cisco.com](mailto:eargueda@cisco.com))*
+*CPOC— Esteban Arguedas ([eargueda@cisco.com](mailto:eargueda@cisco.com))*
 </div>
 
 </div>
