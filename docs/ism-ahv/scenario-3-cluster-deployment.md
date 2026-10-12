@@ -1,10 +1,10 @@
 # Scenario 3 · Nutanix Cluster Deployment with AHV or ESX Hypervisor
 
 !!! note
-    Note In this scenario we’re deploying a cluster of 3 nodes, but if want to deploy the cluster with 4 nodes it can be done, but will have to skip the scenario 4 cluster expansion
+    In this scenario we’re deploying a cluster of 3 nodes. If you want to deploy a cluster with 4 nodes, you can, but you will have to skip Scenario 5, Cluster Expansion.
 
 
-In Foundation Central under Nodes > Manually Onboarded, select the first 3 nodes would like to use for the cluster deployment and click on Create Cluster
+In Foundation Central under Nodes > Manually Onboarded, select the first 3 nodes you would like to use for the cluster deployment and click on Create Cluster
 
 ![Screenshot](images/scenario-3-01.png)
 
@@ -21,6 +21,7 @@ Fill in the networking information a. Gateway = 198.18.128.1 b. Netmask = 255.25
 ![Screenshot](images/scenario-3-16.png)
 
 To complete the cluster Host IP, CVM IP and Host name use the image below as an example, you can choose any IP address from 198.18.135.10 up to 198.18.135.100 
+
 !!! note
     When adding the Host IP, skip one IP address between Host IP and CVM IP
 
@@ -29,7 +30,8 @@ To complete the cluster Host IP, CVM IP and Host name use the image below as an 
 
 
 
-Login into Cisco IMM Transition tool, the access is located on the bookmark, In the Application click in Software Repository, you will see some folders for different versions, for this deployment, we offer the option to select one of the Nutanix AOS and the hypervisor which is supported by the servers, check the versions and select the one you like to deploy using AOS with AHV hypervisor or check below the options of VMware ESXi
+Log in to the Cisco IMM Transition tool (use the bookmark). In the application, click Software Repository; you will see folders for different versions. For this deployment you can select a Nutanix AOS version and a hypervisor supported by the servers. Check the versions and select the one you want to deploy, using AOS with the AHV hypervisor, or see below for the VMware ESXi options.
+
 !!! note
     Check the versions here [https://portal.nutanix.com/page/compatibility-interoperability-matrix](https://portal.nutanix.com/page/compatibility-interoperability-matrix)
 
@@ -72,13 +74,13 @@ Choose one of the options to deploy the new cluster, access the desired folder a
 ![Screenshot](images/scenario-3-14.png)
 
 
-Return to Prism Central and paste the copied link into the AOS URL, then from the hypervisor option click on it and select AHV, then return to Cisco IMM to copy the link of AHV, select the ISO and click Next
+Return to Prism Central and paste the copied link into the AOS URL field. Then open the hypervisor option and select AHV, return to Cisco IMM to copy the link of the AHV image, select the ISO, and click Next.
 
 ![Screenshot](images/scenario-3-15.png)
 
 
 
-CVM Settings uses the following information:
+CVM Settings use the following information:
 
 - Timezone= America/New_York
 - NTP=198.18.128.1
@@ -104,7 +106,7 @@ Return to Intersight, under Operate select Servers to check the Server Profile p
 ![Screenshot](images/scenario-3-21.png)
 
 
-Let’s explore Intersight, under Configure select Profiles > UCS Server Profiles. Note the profiles are being created/configured under Activating status.
+Let’s explore Intersight. Under Configure, select Profiles > UCS Server Profiles. Note the profiles are being created/configured under Activating status.
 
 ![Screenshot](images/scenario-3-22.jpeg)
 
@@ -114,12 +116,12 @@ In Configure > Policies, note all the UCS Server policies created as part of the
 ![Screenshot](images/scenario-3-23.png)
 
 
-At the top right of the screen, click the Requests icon to monitor the undergoing tasks.
+At the top right of the screen, click the Requests icon to monitor the ongoing tasks.
 
 ![Screenshot](images/scenario-3-24.png)
 
 
-Click on any of the tasks to check the progress of the server configuration
+Click on any of the tasks to check the progress of the server configuration.
 
 ![Screenshot](images/scenario-3-25.png)
 
@@ -140,7 +142,7 @@ After the password has been successfully changed, login with user admin and pass
 ![Screenshot](images/scenario-3-28.jpeg)
 
 
-Complete the Nutanix EULA,
+Complete the Nutanix EULA:
 
 - Name = Cpoc
 - Company = Cisco
@@ -227,7 +229,7 @@ Let’s fill in the new VM information
 ![Screenshot](images/scenario-3-40.png)
 
 !!! note
-    Note the new VM recently created
+    The new VM is now listed.
 
 
 Right-click the Ubuntu VM and select Power On
@@ -245,4 +247,4 @@ On the VM console, close the Installation window and open a Firefox browser and 
 ![Screenshot](images/scenario-3-43.jpeg)
 
 
-This concludes this scenario; you can close the Ubuntu console to continue with the next scenario
+This concludes this scenario; you can close the Ubuntu console to continue with the next scenario.

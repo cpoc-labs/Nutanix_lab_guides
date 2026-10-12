@@ -1,10 +1,10 @@
 # Scenario 6 · Nutanix Cluster Expansion
 
 !!! note
-    THIS SCENARIO IS JUST AN EXAMPLE OF HOW TO CREATE A CLUSTER EXPANSION, IF REQUIRED TO DO A CLUSTER EXPANSION WILL NEED TO REQUEST AN EXTRA BLADE THE IMAGES MIGHT NOT BE ACCURATE FOR IMM CLUSTER
+    This scenario is only an example of how to perform a cluster expansion. If you need to expand a cluster, you must request an extra blade. The images might not be accurate for the IMM cluster.
 
 
-1. Return to the new Prism Central (add IP info here to make sure users will go to PC 2024 and not PC 2022) and click on View in my Apps
+1. Return to the new Prism Central (198.18.136.5, to make sure you go to PC 2024 and not PC 2022) and click on View in my Apps
 
 ![Screenshot](images/scenario-6-01.jpeg)
 
@@ -12,7 +12,7 @@
 ![Screenshot](images/scenario-6-02.png)
 
 
-2. Once the App is on running state from Admin Center > LCM > Prism Central Cluster
+2. Once the app is in a running state, go to Admin Center > LCM > Prism Central Cluster.
 
 ![Screenshot](images/scenario-6-03.png)
 
@@ -41,6 +41,7 @@
 
 
 7. Once the Foundation Central upgrade is complete, from the drop-down menu select Foundation Central
+
 !!! note
     If Foundation Central does not load, just Clear the cookies and site data
 
@@ -68,13 +69,13 @@
 - Hardware Provider = Cisco Intersight
 - Intersight Deployment Type = SaaS
 - Intersight Region & URL = North America
-- Intersight API Key = <copy the one generated previously>
-- Secret Key= <copy the one generated previously and saved to the desktop>
+- Intersight API Key = `<copy the one generated previously>`
+- Secret Key= `<copy the one generated previously and saved to the desktop>`
 
 ![Screenshot](images/scenario-6-13.png)
 
 
-12. Select Intersight Standalone Mode and click Next
+12. Select Intersight Managed Mode and click Next.
 
 ![Screenshot](images/scenario-6-14.png)
 
@@ -89,7 +90,7 @@
 ![Screenshot](images/scenario-6-16.png)
 
 
-15. Select the existing ISM cluster and click Next
+15. Select the existing IMM cluster and click Next
 
 ![Screenshot](images/scenario-6-17.png)
 
@@ -137,7 +138,7 @@
 ![Screenshot](images/scenario-6-25.jpeg)
 
 
-23. One the node preparation is completed, click at the top drop-down menu and select infrastructure
+23. Once the node preparation is completed, click the top drop-down menu and select Infrastructure.
 
 ![Screenshot](images/scenario-6-26.png)
 
@@ -147,7 +148,7 @@
 ![Screenshot](images/scenario-6-27.png)
 
 
-25. Check the ISM box and click on actions then select Expand Cluster
+25. Check the IMM box, click Actions, and then select Expand Cluster.
 
 ![Screenshot](images/scenario-6-28.png)
 
@@ -167,7 +168,7 @@
 ![Screenshot](images/scenario-6-31.png)
 
 
-29. On the networking step click on skip Networking
+29. On the networking step click Skip Networking.
 
 ![Screenshot](images/scenario-6-32.png)
 
@@ -190,7 +191,7 @@
 ![Screenshot](images/scenario-6-36.png)
 
 
-33. To review the progress of the cluster expansion, click task at the top right and click view all task
+33. To review the progress of the cluster expansion, click Tasks at the top right and click View all tasks.
 
 ![Screenshot](images/scenario-6-37.png)
 
@@ -243,4 +244,4 @@
 ![Screenshot](images/scenario-6-47.png)
 
 
-43. This is optional if you would like to apply the updates available or keep the cluster with the current version.
+43. Optionally, apply the available updates or keep the cluster on its current version.

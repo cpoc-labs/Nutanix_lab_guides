@@ -1,7 +1,7 @@
 # Scenario 4 · Nutanix Cluster Deployment with AHV or ESX Hypervisor
 
 
-1. In Foundation Central under Nodes > Manually Onboarded, select the 3 nodes would like to use for the cluster deployment and click on Create Cluster
+1. In Foundation Central under Nodes > Manually Onboarded, select the 3 nodes you would like to use for the cluster deployment and click on Create Cluster
 
 ![Screenshot](images/scenario-4-01.png)
 
@@ -14,7 +14,8 @@
 ![Screenshot](images/scenario-4-02.jpeg)
 
 
-3. Login into Cisco IMM Transition tool, the access is located on the bookmark, In the Application click in Software Repository, you will see some folders for different versions, for this deployment, we offer the option to select one of the Nutanix AOS and the hypervisor which is supported by the servers, check the versions and select the one you like to deploy using AOS with AHV hypervisor or check below the options of VMware ESXi
+3. Log in to the Cisco IMM Transition tool (use the bookmark). In the application, click Software Repository; you will see folders for different versions. For this deployment you can select a Nutanix AOS version and a hypervisor supported by the servers. Check the versions and select the one you want to deploy, using AOS with the AHV hypervisor, or see below for the VMware ESXi options.
+
 !!! note
     Check the versions here [https://portal.nutanix.com/page/compatibility-interoperability-matrix](https://portal.nutanix.com/page/compatibility-interoperability-matrix)
 
@@ -57,7 +58,7 @@
 ![Screenshot](images/scenario-4-14.png)
 
 
-5. Return to Prism Central and paste the copied link into the AOS URL, then from the hypervisor option click on it and select AHV, then return to Cisco IMM to copy the link of AHV, select the ISO and click Next
+5. Return to Prism Central and paste the copied link into the AOS URL field. Then open the hypervisor option and select AHV, return to Cisco IMM to copy the link of the AHV image, select the ISO, and click Next.
 
 ![Screenshot](images/scenario-4-15.png)
 
@@ -105,7 +106,7 @@ e. Mac Pool = click the bar and select the existing f. IMC Access Configuration
 ![Screenshot](images/scenario-4-22.jpeg)
 
 
-12. Let’s explore Intersight, under Configure select Profiles > UCS Server Profiles. Note the profiles are being created/configured under Activating status.
+12. Let’s explore Intersight. Under Configure, select Profiles > UCS Server Profiles. Note the profiles are being created/configured under Activating status.
 
 ![Screenshot](images/scenario-4-23.png)
 
@@ -115,12 +116,12 @@ e. Mac Pool = click the bar and select the existing f. IMC Access Configuration
 ![Screenshot](images/scenario-4-24.jpeg)
 
 
-14. In the top right of the screen, click the Requests icon to monitor the undergoing tasks.
+14. In the top right of the screen, click the Requests icon to monitor the ongoing tasks.
 
 ![Screenshot](images/scenario-4-25.jpeg)
 
 
-15. Click on any of the tasks to check the progress of the server configuration
+15. Click on any of the tasks to check the progress of the server configuration.
 
 ![Screenshot](images/scenario-4-26.png)
 
@@ -141,7 +142,7 @@ e. Mac Pool = click the bar and select the existing f. IMC Access Configuration
 ![Screenshot](images/scenario-4-29.jpeg)
 
 
-20. Complete the Nutanix EULA,
+20. Complete the Nutanix EULA:
 
 - Name = Cpoc
 - Company = Cisco
@@ -228,7 +229,7 @@ e. Mac Pool = click the bar and select the existing f. IMC Access Configuration
 ![Screenshot](images/scenario-4-41.png)
 
 !!! note
-    Note the new VM recently created
+    The new VM is now listed.
 
 
 31. Right-click the Ubuntu VM and select Power On
@@ -246,4 +247,4 @@ e. Mac Pool = click the bar and select the existing f. IMC Access Configuration
 ![Screenshot](images/scenario-4-44.jpeg)
 
 
-34. This concludes this scenario; you can close the Ubuntu console to continue with the next scenario
+34. This concludes this scenario; you can close the Ubuntu console to continue with the next scenario.

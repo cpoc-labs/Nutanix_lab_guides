@@ -13,7 +13,7 @@
 
 ## About this CPOC
 
-Cisco Intersight Standalone Mode is an on-premises deployment of Cisco's infrastructure management platform that operates without requiring a connection to the Intersight cloud. When integrated with Nutanix hyperconverged infrastructure (HCI), it allows organizations to manage and monitor their Nutanix environments securely and locally.
+Cisco Intersight Managed Mode (IMM) is a cloud-based management model in which Cisco Intersight configures and manages Cisco UCS domains and servers through policies and profiles. When integrated with Nutanix hyperconverged infrastructure (HCI) through Foundation Central, it allows organizations to deploy and manage Nutanix clusters consistently from a single platform.
 
 In this mode, Intersight provides:
 
@@ -21,9 +21,9 @@ In this mode, Intersight provides:
 - Monitoring of VMs, hosts, and cluster health
 - Management of Cisco hardware (e.g., UCS servers running Nutanix)
 - Single pane of glass for hybrid environments
-- Air-gapped and compliance-friendly operations
+- Policy-based, repeatable server configuration
 
-It's ideal for secure, regulated environments that require local control, while still benefiting from unified infrastructure management across Cisco and Nutanix systems.
+It's ideal for environments that need consistent, automated, cloud-managed operations across Cisco and Nutanix systems.
 
 ## Scope
 
@@ -48,7 +48,7 @@ See the [Environment](environment.md) page for lab IP addresses, credentials and
 
 Test results are suitable to the specific design, configuration, test procedure, and types of switches deployed in the environment described in this document.
 
-This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing usage or trade practice.
+This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing, usage, or trade practice.
 
 All printed copies and duplicate soft copies are not considered controlled; therefore, please refer to the original online version for the latest version.
 

@@ -19,7 +19,7 @@
 | Ad1 | 198.18.133.1 | dcloud/administrator/C1sco12345 | Windows server |
 | Vcenter 7 | 198.18.133.30 | administrator@vsphere.local / C1sco12345! | VMWare Vsphere |
 | Vcenter 8.0.3 | 198.18.133.31 | administrator@vsphere.local / C1sco12345! | VMWare Vsphere |
-| Cisco IMM | 198.18.128.100 | admin / C1sco12345 | Cisco IMM Transition |
+| Cisco IMM | 198.18.129.100 | admin / C1sco12345 | Cisco IMM Transition |
 | Nutanix Foundation Central 1.10| 198.18.128.176 | admin / C1sco12345! | 1.10|
 | Nutanix Foundation Central 2.2| 198.18.128.181 | admin / C1sco12345! | 2.2|
 | Intersight Assist | 198.18.128.254 | admin / C1sco12345 | Intersight |
@@ -33,9 +33,6 @@
 | ISM IP Pool for cluster | 198.18.135.10-100 | | |
 
 ## Equipment – CPOC Lab
-
-!!! note
-    Be sure to include the Software Version in this table.
 
 | Quantity Required | Model | Software Version |
 |---|---|---|

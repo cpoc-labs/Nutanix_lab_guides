@@ -18,7 +18,7 @@
 | Ad1 | 198.18.133.1 | dcloud/administrator/C1sco12345 | Windows server |
 | Vcenter 7 | 198.18.133.30 | administrator@vsphere.local / C1sco12345! | VMWare Vsphere |
 | Vcenter 8.0.3 | 198.18.133.31 | administrator@vsphere.local / C1sco12345! | VMWare Vsphere |
-| Cisco IMM | 198.18.128.100 | admin / C1sco12345 | Cisco IMM Transition |
+| Cisco IMM | 198.18.129.100 | admin / C1sco12345 | Cisco IMM Transition |
 | Nutanix-pc.2022.6.0.12 | 198.18.128.150 | admin / C1sco12345! | Nutanix-pc.2022.6.0.12 |
 | Intersight Assist | 198.18.128.254 | admin / C1sco12345 | Intersight |
 | Intersight pva | 198.18.128.253 | admin / C1sco12345 | Intersight |
@@ -32,9 +32,6 @@
 | Reserved IP Pool Intersight | 198.18.136.220-255 | | |
 
 ## Equipment – CPOC Lab
-
-!!! note
-    Be sure to include the Software Version in this table.
 
 | Quantity Required | Model | Software Version |
 |---|---|---|

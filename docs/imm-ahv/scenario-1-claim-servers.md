@@ -3,39 +3,39 @@
 Cisco Intersight Claim Servers is a process used to register or "claim" physical infrastructure devices (like Cisco UCS servers or Nexus switches) to the Cisco Intersight platform. Intersight is a cloud-based infrastructure management tool that provides centralized monitoring, configuration, and lifecycle management for Cisco data center hardware.
 
 
-1. Click on cpoc-win10-1 on the main topology, on the left side select remote access and then click on web RDP to log in
+1. Click cpoc-win10-1 on the main topology, on the left side select remote access and then click web RDP to log in.
 
 ![Screenshot](images/scenario-1-01.png)
 
 
-2. Once in the workstation open firefox browser
+2. Once in the workstation, open the Firefox browser
 
 ![Screenshot](images/scenario-1-02.jpeg)
 
 
-3. Log in to one Fabric Interconnect’s web console via HTTPS with a web browser using the IP address 198.18.135.9 admin / C1sco12345! - Retrieve the Device ID and the Claim Code from the console page by clicking on Device Connector at the top.
+3. Log in to the web console of one Fabric Interconnect via HTTPS using the IP address 198.18.143.9 (admin / C1sco12345!). Retrieve the Device ID and the Claim Code from the console page by clicking Device Connector at the top.
 
 ![Screenshot](images/scenario-1-03.jpeg)
 
 
-4. In Cisco Intersight, go to the System area, click on Targets, then Claim a New Target
+4. In Cisco Intersight, go to the System area, click on Targets, then Claim a New Target.
 
 ![Screenshot](images/scenario-1-04.jpeg)
 
 
-5. Select Cisco UCS Domain (Intersight Managed) then enter the Device ID and Claim Code, then click Claim. Repeat for all the servers to be used in your new cluster
+5. Select Cisco UCS Domain (Intersight Managed) then enter the Device ID and Claim Code, then click Claim. Repeat for all the domains to be used in your new cluster.
 
 ![Screenshot](images/scenario-1-05.png)
 
 
 ![Screenshot](images/scenario-1-06.jpeg)
 
-A Domain Profile must be created and deployed to the Fabric Interconnects. The Domain Profile defines the roles of the ports on the Fabric Interconnects, the VLANs used on the network and several other domain-wide policy settings such as QoS. After the Domain Profile is deployed the rackmount servers and/or modular blades will discover and can then be onboarded in Foundation Central and targeted for a Nutanix cluster deployment. Ensure that the profile and all the associated policies are created in the Organization that also contains the Resource Group for the Fabric Interconnects and servers.
+A Domain Profile must be created and deployed to the Fabric Interconnects. The Domain Profile defines the roles of the ports on the Fabric Interconnects, the VLANs used on the network and several other domain-wide policy settings such as QoS. After the Domain Profile is deployed the rackmount servers and/or modular blades will be discovered and can then be onboarded in Foundation Central and targeted for a Nutanix cluster deployment. Ensure that the profile and all the associated policies are created in the Organization that also contains the Resource Group for the Fabric Interconnects and servers.
 
 
 ![Screenshot](images/scenario-1-07.png)
 
-Select the appropriate Organization in the Intersight account and give the policy a name. Select the Fabric Interconnect pair the policy will be applied to.
+Select the appropriate Organization in the Intersight account and give the profile a name. Select the Fabric Interconnect pair the profile will be applied to.
 
 
 ![Screenshot](images/scenario-1-08.png)
@@ -90,7 +90,7 @@ Click to select the Port policy for Fabric Interconnect A then click Create New.
 
 ![Screenshot](images/scenario-1-20.png)
 
-Select the appropriate organization, enter a name for the Port policy and select the model of Fabric Interconnect matching the hardware in use, then click next. If Fibre Channel ports are required for use by other non-Nutanix modular servers then configure the unified ports, otherwise click Next to continue.
+Select the appropriate organization, enter a name for the Port policy and select the model of Fabric Interconnect matching the hardware in use, then click Next. If Fibre Channel ports are required for use by other non-Nutanix modular servers then configure the unified ports, otherwise click Next to continue.
 
 
 ![Screenshot](images/scenario-1-21.png)
@@ -136,7 +136,7 @@ Select to create an NTP policy. Select the appropriate organization, enter a nam
 
 ![Screenshot](images/scenario-1-30.png)
 
-Enable NTP, enter at least one NTP server and select the appropriate timezone then click Create
+Enable NTP, enter at least one NTP server and select the appropriate time zone, then click Create.
 
 
 ![Screenshot](images/scenario-1-31.png)
@@ -146,7 +146,7 @@ After returning to the previous screen click to select a System QoS Policy. Sele
 
 ![Screenshot](images/scenario-1-32.png)
 
-Set the Best Effort QoS class to MTU 9216 then click Create
+Set the Best Effort QoS class to MTU 9216, then click Create.
 
 
 ![Screenshot](images/scenario-1-33.png)
@@ -156,7 +156,7 @@ After returning to the previous screen click to select a Network Connectivity Po
 
 ![Screenshot](images/scenario-1-34.png)
 
-Set the preferred primary DNS server address then click Create. Once an NTP policy, Network Connectivity policy and System QoS policy are configured, click Next to move to the domain summary
+Set the preferred primary DNS server address then click Create. Once an NTP policy, Network Connectivity policy and System QoS policy are configured, click Next to move to the domain summary.
 
 
 ![Screenshot](images/scenario-1-35.png)

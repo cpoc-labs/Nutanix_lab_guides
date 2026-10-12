@@ -146,7 +146,7 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 <p class="cpoc-desc">A new CPOC guide for Cisco Unified Edge is being drafted. Check back soon for the full set of scenarios.</p>
 
 <div class="cpoc-btn-row" markdown>
-[Start the Unified Edge→](unified-edge/index.md){ .cpoc-btn }
+[Start the Unified Edge →](unified-edge/index.md){ .cpoc-btn }
 [PDF](#){ .cpoc-btn .cpoc-btn--outline data-pdf-guide="unified-edge" }
 </div>
 
@@ -158,12 +158,12 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 Test results are suitable to the specific design, configuration, test procedure, and types of switches deployed in the environment described in this document.
 
-This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing usage or trade practice.
+This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing, usage, or trade practice.
 
 All printed copies and duplicate soft copies are not considered controlled; therefore, please refer to the original online version for the latest version.
 
 <div class="cpoc-footer" markdown>
-*CPOC— Esteban Arguedas ([eargueda@cisco.com](mailto:eargueda@cisco.com))*
+*CPOC — Esteban Arguedas ([eargueda@cisco.com](mailto:eargueda@cisco.com))*
 </div>
 
 </div>

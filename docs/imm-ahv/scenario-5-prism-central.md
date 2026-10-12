@@ -1,12 +1,12 @@
 # Scenario 5 · Nutanix Prism Central Deployment and Cluster Registration
 
 
-1. In the main dashboard on the Prism Central click in Register or create new
+1. In the main dashboard on the Prism Central click Register or create new
 
 ![Screenshot](images/scenario-5-01.png)
 
 
-2. Select the first option, I want to deploy a new Prism Central Instance
+2. Select the first option, “I want to deploy a new Prism Central instance”.
 
 ![Screenshot](images/scenario-5-02.png)
 
@@ -16,9 +16,10 @@
 ![Screenshot](images/scenario-5-03.png)
 
 
-4. Select “Small” and click next
+4. Select “Small” and click Next.
+
 !!! note
-    NOTE: Do NOT select X-Small, this option does not support cluster expansion
+    Do NOT select X-Small, this option does not support cluster expansion
 
 
 ![Screenshot](images/scenario-5-04.png)
@@ -52,7 +53,7 @@
 ![Screenshot](images/scenario-5-07.png)
 
 
-7. Once Prism Central deployment is completed, use a web browser to connect to the virtual IP assigned (198.18.136.4) and change the default
+7. Once Prism Central deployment is completed, use a web browser to connect to the virtual IP assigned (198.18.136.4) and change the default password.
 
 - First time logging in the credentials are:
     - Username = admin
@@ -93,17 +94,17 @@
 ![Screenshot](images/scenario-5-14.jpeg)
 
 
-12. Once the Marketplace has been enabled, Click “Get” on Foundation Central then click Deploy
+12. Once the Marketplace has been enabled, click “Get” on Foundation Central then click Deploy
 
 ![Screenshot](images/scenario-5-15.png)
 
 
-13. While the Foundation Central app is being deployed on Prism Central, return to the Prism Element main dashboard, and confirm then click “Register or create a new“
+13. While the Foundation Central app is being deployed on Prism Central, return to the Prism Element main dashboard, and confirm, then click “Register or create a new”.
 
 ![Screenshot](images/scenario-5-16.png)
 
 
-14. Now click connect and hit next
+14. Now click Connect and then click Next.
 
 ![Screenshot](images/scenario-5-17.png)
 

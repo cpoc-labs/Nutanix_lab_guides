@@ -1,24 +1,25 @@
 # Scenario 4 · Nutanix Prism Central Deployment and Cluster Registration
 
 
-In the main dashboard on the Prism Central click in Register or create new
+In the main dashboard on the Prism Central click Register or create new
 
 ![Screenshot](images/scenario-4-01.png)
 
 
-Select the first option, I want to deploy a new Prism Central Instance
+Select the first option, “I want to deploy a new Prism Central instance”.
 
 ![Screenshot](images/scenario-4-02.png)
 
 
-Under Installation Image section, PC details ISM-PC select “pc.7.5.1.1” and click Next
+In the Installation Image section, select “pc.7.5.1.1” (PC details: ISM-PC) and click Next.
 
 ![Screenshot](images/scenario-4-03.png)
 
 
-Select “Small” and click next
+Select “Small” and click Next.
+
 !!! note
-    NOTE: Do NOT select X-Small, this option does not support cluster expansion
+    Do NOT select X-Small, this option does not support cluster expansion
 
 
 ![Screenshot](images/scenario-4-04.png)
@@ -44,7 +45,7 @@ After the deployment begins it will take you back to the main dashboard and unde
 ![Screenshot](images/scenario-4-07.png)
 
 
-Once Prism Central deployment is completed, use a web browser to connect to the virtual IP assigned (198.18.135.4) and change the default
+Once Prism Central deployment is completed, use a web browser to connect to the virtual IP assigned (198.18.135.4) and change the default password.
 
 - First time logging in the credentials are:
     - Username = admin
@@ -61,12 +62,12 @@ Once Prism Central deployment is completed, use a web browser to connect to the 
 ![Screenshot](images/scenario-4-10.jpeg)
 
 
-17. After the password is changed continue with the EULA
+After the password is changed continue with the EULA
 
 ![Screenshot](images/scenario-4-11.jpeg)
 
 
-18. Keep Pulse by default and click Continue
+Keep Pulse by default and click Continue
 
 ![Screenshot](images/scenario-4-12.jpeg)
 
@@ -90,12 +91,12 @@ Once the Marketplace has been enabled, click “Get” on Foundation Central the
 ![Screenshot](images/scenario-4-15.png)
 
 
-While the Foundation Central app is being deployed on Prism Central, return to the Prism Element main dashboard, and confirm then click “Register or create a new “
+While the Foundation Central app is being deployed on Prism Central, return to the Prism Element main dashboard, and confirm, then click “Register or create a new”.
 
 ![Screenshot](images/scenario-4-16.png)
 
 
-Now click connect and hit next
+Now click Connect and then click Next.
 
 ![Screenshot](images/scenario-4-17.jpeg)
 

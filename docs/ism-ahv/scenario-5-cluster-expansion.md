@@ -1,7 +1,7 @@
 # Scenario 5 · Nutanix Cluster Expansion
 
 
-Return to the new Prism Central (add IP info here to make sure users will go to PC 7.5.1.1) and click on View in my Apps
+Return to the new Prism Central (198.18.135.5, to make sure you go to PC 7.5.1.1) and click on View in my Apps
 
 ![Screenshot](images/scenario-5-01.jpeg)
 
@@ -9,7 +9,7 @@ Return to the new Prism Central (add IP info here to make sure users will go to 
 ![Screenshot](images/scenario-5-02.png)
 
 
-Once the App is on running state from Admin Center > LCM > Prism Central Cluster
+Once the app is in a running state, go to Admin Center > LCM > Prism Central Cluster.
 
 ![Screenshot](images/scenario-5-03.png)
 
@@ -38,6 +38,7 @@ Click Apply 1 Update and wait until the Foundation Central update is complete
 
 
 Once the Foundation Central upgrade is complete, from the drop-down menu select Foundation Central
+
 !!! note
     If Foundation Central does not load, just Clear the cookies and site data
 
@@ -65,8 +66,8 @@ Fill in the required information
 - Hardware Provider = Cisco Intersight
 - Intersight Deployment Type = SaaS
 - Intersight Region & URL = North America
-- Intersight API Key = <copy the one generated previously>
-- Secret Key= <copy the one generated previously and saved to the desktop>
+- Intersight API Key = `<copy the one generated previously>`
+- Secret Key= `<copy the one generated previously and saved to the desktop>`
 
 ![Screenshot](images/scenario-5-13.png)
 
@@ -134,7 +135,7 @@ The node preparation process begins
 ![Screenshot](images/scenario-5-25.jpeg)
 
 
-One the node preparation is completed, click at the top drop-down menu and select infrastructure
+Once the node preparation is completed, click the top drop-down menu and select Infrastructure.
 
 ![Screenshot](images/scenario-5-26.png)
 
@@ -144,7 +145,7 @@ On the left menu, select Hardware > Clusters
 ![Screenshot](images/scenario-5-27.png)
 
 
-Check the ISM box and click on actions then select Expand Cluster
+Check the ISM box, click Actions, and then select Expand Cluster.
 
 ![Screenshot](images/scenario-5-28.png)
 
@@ -164,7 +165,7 @@ Add a name c240-node-4 and then click next
 ![Screenshot](images/scenario-5-31.png)
 
 
-On the networking step click on skip Networking
+On the networking step click Skip Networking.
 
 ![Screenshot](images/scenario-5-32.png)
 
@@ -187,7 +188,7 @@ Once the precheck is completed, click on Expand Cluster
 ![Screenshot](images/scenario-5-36.png)
 
 
-To review the progress of the cluster expansion, click task at the top right and click view all task
+To review the progress of the cluster expansion, click Tasks at the top right and click View all tasks.
 
 ![Screenshot](images/scenario-5-37.png)
 
@@ -240,4 +241,4 @@ Click updates and select software to review all available updates
 ![Screenshot](images/scenario-5-47.png)
 
 
-This is optional if you would like to apply the updates available or keep the cluster with the current version.
+Optionally, apply the available updates or keep the cluster on its current version.

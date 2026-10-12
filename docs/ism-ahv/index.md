@@ -48,7 +48,7 @@ See the [Environment](environment.md) page for lab IP addresses, credentials and
 
 Test results are suitable to the specific design, configuration, test procedure, and types of switches deployed in the environment described in this document.
 
-This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing usage or trade practice.
+This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing, usage, or trade practice.
 
 All printed copies and duplicate soft copies are not considered controlled; therefore, please refer to the original online version for the latest version.
 
@@ -57,7 +57,7 @@ All printed copies and duplicate soft copies are not considered controlled; ther
 | Revision | Date | Author | Description | Version |
 |---|---|---|---|---|
 | 1 | 12 March 2026 | Arguedas | Intersight – Nutanix ISM use cases | 1.0 |
-| 2 | 1 october 2026 | Arguedas | Intersight – Nutanix ISM use cases | 2.0 |
+| 2 | 1 October 2026 | Arguedas | Intersight – Nutanix ISM use cases | 2.0 |
 
 <!-- pdf:skip:start -->
 <div class="cpoc-cta" markdown>
