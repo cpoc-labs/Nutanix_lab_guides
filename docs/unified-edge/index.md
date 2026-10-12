@@ -1,5 +1,16 @@
 # Cisco Unified Edge
+
 *Cisco Global Demo Engineering Customer Proof of Concept*
+
+**Author:** Esteban Arguedas (eargueda@cisco.com) · **Version:** 1.0 · **Last updated:** 1 October 2026
+
+<!-- pdf:skip:start -->
+[Download this guide as PDF](#){ .cpoc-btn data-pdf-guide="unified-edge" }
+<!-- pdf:skip:end -->
+
+!!! note "Document status"
+    All printed copies and duplicate soft copies of this document are considered uncontrolled. Please refer to the original, online document link for the current version.
+
 ## About this CPOC
 
 Cisco Unified Edge with Nutanix is a joint, software-defined infrastructure platform designed to extend data center compute, networking, security, and storage directly to edge locations.

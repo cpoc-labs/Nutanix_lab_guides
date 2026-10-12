@@ -50,7 +50,7 @@ Test results are suitable to the specific design, configuration, test procedure,
 
 This document is provided "As-Is," without warranty of any kind, express or implied, including without limitation those of merchantability, fitness for a particular purpose, and non-infringement arising from a course of dealing usage or trade practice.
 
-All printed copies and duplicate soft copies are not considered controlled.
+All printed copies and duplicate soft copies are not considered controlled; therefore, please refer to the original online version for the latest version.
 
 ### Document history
 
