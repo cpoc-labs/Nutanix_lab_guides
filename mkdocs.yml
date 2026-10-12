@@ -71,7 +71,7 @@ nav:
       - Overview: unified-edge/index.md
       - Environment: unified-edge/environment.md
       - Get Started: unified-edge/getting-started.md
-      - Scenario 1: unified-edge/scenario-1.md
-      - Scenario 2: unified-edge/scenario-2.md
-      - Scenario 3 - Witness VM: unified-edge/scenario-3.md
-      - Scenario 4 - Initial Cluster Configuration: unified-edge/scenario-4.md
+      - unified-edge/scenario-1.md
+      - unified-edge/scenario-2.md
+      - unified-edge/scenario-3.md
+      - unified-edge/scenario-4.md
