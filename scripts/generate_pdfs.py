@@ -67,15 +67,6 @@ GUIDES = {
         "email": "eargueda@cisco.com",
         "pdf_name": "Unified-Edge-CPOC-Guide.pdf",
     },
-    "test-labguides": {
-        "nav_label": "Test Labguides",
-        "title": "Test Labguides",
-        "subtitle": "Nutanix",
-        "date": "12 October 2026",
-        "author": "Esteban Arguedas",
-        "email": "eargueda@cisco.com",
-        "pdf_name": "Test-Labguides-CPOC-Guide.pdf",
-    },
 }
 
 COVER_TEMPLATE = """<!DOCTYPE html>

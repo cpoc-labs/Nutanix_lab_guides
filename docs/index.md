@@ -152,21 +152,6 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 </div>
 
-<div class="cpoc-card" markdown>
-<span class="cpoc-tag">Cloud-managed</span>
-
-## Test Labguides
-
-<p class="cpoc-desc">Describe the purpose of this guide here.</p>
-
-<div class="cpoc-stats"><span><strong>1</strong> scenarios</span></div>
-
-<div class="cpoc-btn-row" markdown>
-[Start the Test Labguides guide →](test-labguides/index.md){ .cpoc-btn }
-[PDF](#){ .cpoc-btn .cpoc-btn--outline data-pdf-guide="test-labguides" }
-</div>
-</div>
-
 </div>
 
 ## Disclaimer

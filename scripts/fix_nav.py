@@ -9,6 +9,9 @@ For each nav entry whose file no longer exists, the new location is found by:
   1. git rename history (`git log -M`), when history is available, then
   2. the closest-named page in the same folder that the nav does not use yet.
 Entries that cannot be resolved confidently are reported and exit code is 1.
+
+Deletions are not renames: entries of a guide whose folder is gone, or of a scenario page that was
+deleted, are left alone here and removed by sync_scenarios.py / sync_guides.py.
 """
 import difflib
 import re
@@ -19,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 CONFIG = ROOT / "mkdocs.yml"
+SCENARIO_FILE = re.compile(r"^scenario-\d+")
 NAV_LINE = re.compile(r"^(\s*-\s+(?:[^:\n]+:\s+)?)([^\s#]+\.md)(\s*)$")
 
 
@@ -84,6 +88,10 @@ def main():
     renames, unresolved = git_renames(), 0
     for i, old in missing:
         new = resolve(old, renames, unused)
+        guide_gone = not any((DOCS / Path(old).parts[0]).glob("*.md"))
+        if not new and (guide_gone or SCENARIO_FILE.match(Path(old).name)):
+            print(f"DELETED: {old} (left for sync_scenarios.py to remove from the nav)")
+            continue
         if not new:
             print(f"UNRESOLVED: {old} (no matching page found)")
             unresolved += 1

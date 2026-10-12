@@ -26,11 +26,8 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Auto-fix nav entries for renamed pages
-        run: python scripts/fix_nav.py
-
-      - name: Sync nav, indexes and titles with scenario pages
-        run: python scripts/sync_scenarios.py
+      - name: Auto-fix pages, images, nav and indexes
+        run: python scripts/autofix.py
 
       - name: Write PDF guide manifest
         run: python scripts/generate_pdfs.py --manifest

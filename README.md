@@ -12,7 +12,6 @@ Three guides are published:
 | Intersight Managed Mode (IMM) | `docs/imm-ahv/` | 6 | `Intersight Managed Mode (IMM)` |
 | Intersight Standalone Mode (ISM) | `docs/ism-ahv/` | 5 | `Intersight Standalone Mode (ISM)` |
 | Cisco Unified Edge | `docs/unified-edge/` | 4 | `Cisco Unified Edge` |
-| Test Labguides | `docs/test-labguides/` | 1 | `Test Labguides` |
 <!-- auto:guides:end -->
 
 Everything is plain Markdown. There is no database and no server: the site is built once, and all
@@ -73,6 +72,7 @@ dynamic behaviour (login gate, PDF export) runs in the visitor's browser.
 <!-- auto:scripts:start -->
 | Script | What it does |
 |---|---|
+| `scripts/autofix.py` | Repair the common mistakes that break `mkdocs build --strict`, then sync nav/indexes. |
 | `scripts/fix_nav.py` | Auto-fix mkdocs.yml nav entries that point at renamed/moved pages. |
 | `scripts/generate_pdfs.py` | Generate guide PDFs (offline) and the guides.json manifest used by the site's PDF buttons. |
 | `scripts/sync_guides.py` | Detect new guide folders under docs/ and register them everywhere, in the existing style. |
