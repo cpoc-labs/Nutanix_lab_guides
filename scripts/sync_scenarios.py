@@ -144,8 +144,16 @@ def sync_home(check):
     return changes
 
 
+def warn_ignored():
+    """Flag scenario-like files that are skipped because they are not `scenario-<N>*.md`."""
+    for p in sorted(DOCS.glob("*/scenario-*")):
+        if p.is_file() and p.suffix.lower() != ".md" and p.suffix.lower() not in {".png", ".jpg", ".jpeg", ".gif"}:
+            print(f"WARNING: {p.relative_to(ROOT)} ignored, it must end in .md (rename to {p.name}.md)")
+
+
 def main():
     check = "--check" in sys.argv
+    warn_ignored()
     changes = sync_guides.sync(check)  # register brand-new guide folders first
     lines = CONFIG.read_text(encoding="utf-8").splitlines(keepends=True)
     for guide in guides():

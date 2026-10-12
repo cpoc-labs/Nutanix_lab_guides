@@ -75,3 +75,6 @@ nav:
       - Scenario 2 - Nutanix Cluster Deployment with AHV or ESX Hypervisor: unified-edge/scenario-2.md
       - Scenario 3 - Initial Cluster Configuration: unified-edge/scenario-3.md
       - Scenario 4 - Witness VM Installation and configuration (Optional): unified-edge/scenario-4.md
+  - Test Labguides:
+      - Overview: test-labguides/index.md
+      - Scenario 3 - Initial Cluster Configuration: test-labguides/scenario-1.md

@@ -15,6 +15,9 @@ index.md also counts). For each guide that is missing from one of the places bel
 The guide title comes from the H1 of <folder>/index.md (or the folder name if there is none) and the
 card description from its "About this CPOC" paragraph. Existing guides are never modified here;
 scenario rows, counts and labels are kept current by sync_scenarios.py.
+
+The reverse also holds: when a guide folder is deleted (or no longer holds any .md page), its
+nav section, home card, GUIDES entry and CMS collection are removed from the same five places.
 """
 import datetime
 import re
@@ -322,12 +325,95 @@ def sync_admin(folder, title, check):
     return [f"admin/config.yml: added CMS collection '{name}'"]
 
 
+# ---- removal of deleted guides ------------------------------------------------------------------
+def registered_folders():
+    """Guide folders referenced by any of the registration points, whether or not they still exist."""
+    found = set()
+    nav = re.compile(r"^\s*-\s+(?:[^:\n]+:\s+)?([\w.-]+)/[^\s]*\.md\s*$", re.M)
+    found.update(nav.findall(read(CONFIG)[0]))
+    home = read(HOME)[0]
+    found.update(re.findall(r'data-pdf-guide="([^"]+)"', home))
+    found.update(re.findall(r"\]\(([\w.-]+)/index\.md\)", home))
+    found.update(re.findall(r'^    "([^"]+)"\s*:\s*\{', read(PDF_SCRIPT)[0], re.M))
+    if ADMIN.exists():
+        found.update(re.findall(r'^\s+folder:\s*"docs/([^"/]+)"', read(ADMIN)[0], re.M))
+    return found - NOT_GUIDES
+
+
+def remove_nav(folder, check):
+    text, crlf = read(CONFIG)
+    lines = text.split("\n")
+    entry = re.compile(rf"^\s*-\s+(?:[^:\n]+:\s+)?{re.escape(folder)}/[^\s]*\.md\s*$")
+    hits = [i for i, l in enumerate(lines) if entry.match(l)]
+    if not hits:
+        return []
+    depth = lambda l: len(l) - len(l.lstrip())
+    start, end = hits[0], hits[-1] + 1
+    top = start - 1  # a section header sits one level above its pages: "  - Title:"
+    while top >= 0 and (not lines[top].strip() or depth(lines[top]) >= depth(lines[start])):
+        top -= 1
+    if top >= 0 and lines[top].rstrip().endswith(":"):
+        j = end
+        while j < len(lines) and lines[j].strip() and depth(lines[j]) > depth(lines[top]):
+            j += 1
+        start, end = top, j
+    del lines[start:end]
+    if not check:
+        write(CONFIG, "\n".join(lines), crlf)
+    return [f"mkdocs.yml: removed nav section for deleted guide '{folder}'"]
+
+
+def remove_home(folder, check):
+    text, crlf = read(HOME)
+    m = re.search(rf'\]\({re.escape(folder)}/index\.md\)|data-pdf-guide="{re.escape(folder)}"', text)
+    if not m:
+        return []
+    start = text.rfind('<div class="cpoc-card"', 0, m.start())
+    if start == -1:
+        return []
+    nxt = text.find('<div class="cpoc-card"', m.end())
+    if nxt == -1:  # last card: stop before the grid's closing </div>
+        marker = text.find("## Disclaimer")
+        nxt = text.rfind("</div>", 0, marker if marker != -1 else len(text))
+    new = text[:start].rstrip(" \n") + "\n\n" + text[nxt:]
+    if not check:
+        write(HOME, new, crlf)
+    return [f"docs/index.md: removed card for deleted guide '{folder}'"]
+
+
+def remove_pdf_script(folder, check):
+    text, crlf = read(PDF_SCRIPT)
+    new, n = re.subn(rf'^    "{re.escape(folder)}"\s*:\s*\{{\n.*?^    \}},\n', "", text,
+                     count=1, flags=re.M | re.S)
+    if not n:
+        return []
+    if not check:
+        write(PDF_SCRIPT, new, crlf)
+    return [f"generate_pdfs.py: removed GUIDES entry '{folder}'"]
+
+
+def remove_admin(folder, check):
+    if not ADMIN.exists():
+        return []
+    text, crlf = read(ADMIN)
+    blocks = re.split(r"(?=^  - name: )", text, flags=re.M)
+    kept = [b for b in blocks if not re.search(rf'^\s+folder:\s*"docs/{re.escape(folder)}"', b, re.M)]
+    if len(kept) == len(blocks):
+        return []
+    if not check:
+        write(ADMIN, "".join(kept).rstrip("\n") + "\n", crlf)
+    return [f"admin/config.yml: removed CMS collection for deleted guide '{folder}'"]
+
+
 def sync(check=False):
     changes = []
     for folder in guide_folders():
         title = guide_title(folder)
         for step in (sync_index, sync_nav, sync_home, sync_pdf_script, sync_admin):
             changes += step(folder, title, check)
+    for folder in sorted(registered_folders() - set(guide_folders())):
+        for step in (remove_nav, remove_home, remove_pdf_script, remove_admin):
+            changes += step(folder, check)
     return changes
 
 

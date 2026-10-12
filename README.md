@@ -12,6 +12,7 @@ Three guides are published:
 | Intersight Managed Mode (IMM) | `docs/imm-ahv/` | 6 | `Intersight Managed Mode (IMM)` |
 | Intersight Standalone Mode (ISM) | `docs/ism-ahv/` | 5 | `Intersight Standalone Mode (ISM)` |
 | Cisco Unified Edge | `docs/unified-edge/` | 4 | `Cisco Unified Edge` |
+| Test Labguides | `docs/test-labguides/` | 1 | `Test Labguides` |
 <!-- auto:guides:end -->
 
 Everything is plain Markdown. There is no database and no server: the site is built once, and all

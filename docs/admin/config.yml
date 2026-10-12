@@ -45,3 +45,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "test_labguides"
+    label: "Test Labguides"
+    folder: "docs/test-labguides"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "images"
+    public_folder: "images"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
