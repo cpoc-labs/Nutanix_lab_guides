@@ -14,9 +14,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 CONFIG = ROOT / "mkdocs.yml"
 NAV_LINE = re.compile(r"^(\s*-\s+)(?:([^:\n]+?):\s+)?([^\s#:]+\.md)(\s*)$")
-# Guide folders whose nav labels follow the page H1. IMM/ISM keep short hand-written labels.
-GUIDES = ("unified-edge",)
-SCENARIO = re.compile(r"^(?:%s)/scenario-[^/]*\.md$" % "|".join(map(re.escape, GUIDES)))
+# Guide folders that keep short hand-written nav labels; every other guide (including new ones
+# registered by sync_guides.py) follows the page H1.
+MANUAL_LABELS = ("imm-ahv", "ism-ahv")
+SCENARIO = re.compile(r"^(?!(?:%s)/)[^/]+/scenario-[^/]*\.md$" % "|".join(map(re.escape, MANUAL_LABELS)))
 SEPARATOR = re.compile(r"^(Scenario\s+\d+)\s*[·•:–—-]*\s*(?=\S)")
 
 

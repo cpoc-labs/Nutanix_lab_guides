@@ -5,19 +5,24 @@
 
 Drop a new `docs/<guide>/scenario-<N>*.md` (starting with a `# Scenario N ...`
 heading) and run this. For every guide folder it:
+  0. registers brand-new guide folders (index.md, nav section, home card, PDF entry, CMS) via
+     sync_guides.py,
   1. adds the page to the mkdocs.yml nav, ordered by scenario number
      (removes nav entries whose file was deleted),
   2. adds/removes its row in the "What you'll do" table of <guide>/index.md
      (descriptions of existing rows are left as you wrote them),
   3. refreshes the "N scenarios" count on the guide's card in docs/index.md,
-  4. then re-syncs nav labels from the page headings (sync_nav_titles.py).
+  4. then re-syncs nav labels from the page headings (sync_nav_titles.py),
+  5. and refreshes the guides/scripts tables in README.md (update_readme.py).
 """
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import sync_guides  # noqa: E402
 import sync_nav_titles as titles  # noqa: E402
+import update_readme  # noqa: E402
 
 ROOT, DOCS, CONFIG = titles.ROOT, titles.DOCS, titles.CONFIG
 SCENARIO_FILE = re.compile(r"^scenario-(\d+)")
@@ -141,8 +146,8 @@ def sync_home(check):
 
 def main():
     check = "--check" in sys.argv
+    changes = sync_guides.sync(check)  # register brand-new guide folders first
     lines = CONFIG.read_text(encoding="utf-8").splitlines(keepends=True)
-    changes = []
     for guide in guides():
         changes += sync_nav(guide, lines, check)
         changes += sync_table(guide, check)
@@ -152,6 +157,8 @@ def main():
     for c in changes:
         print(("WOULD " if check else "") + c)
     titles_changed = titles.sync(check)
+    if not check:
+        update_readme.main()
     if not changes and not titles_changed:
         print("scenario nav and indexes OK")
     return 1 if check and (changes or titles_changed) else 0

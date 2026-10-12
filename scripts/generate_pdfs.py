@@ -1,5 +1,7 @@
 """
-Generate a downloadable PDF for each lab guide, styled to resemble the
+Generate guide PDFs (offline) and the guides.json manifest used by the site's PDF buttons.
+
+Each PDF is styled to resemble the
 original Cisco CPOC template: a branded cover page, then content pages with
 a repeating "Cisco Global Demo Engineering Customer Proof of Concept" header
 and "Cisco (c) 2025. All Rights Reserved." + page number footer.
