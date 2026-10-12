@@ -29,6 +29,9 @@ jobs:
       - name: Auto-fix nav entries for renamed pages
         run: python scripts/fix_nav.py
 
+      - name: Sync nav titles with page headings
+        run: python scripts/sync_nav_titles.py
+
       - name: Write PDF guide manifest
         run: python scripts/generate_pdfs.py --manifest
 

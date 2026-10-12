@@ -71,7 +71,7 @@ nav:
       - Overview: unified-edge/index.md
       - Environment: unified-edge/environment.md
       - Get Started: unified-edge/getting-started.md
-      - unified-edge/scenario-1.md
-      - unified-edge/scenario-2.md
-      - unified-edge/scenario-3.md
-      - unified-edge/scenario-4.md
+      - Scenario 1 - Configure Hardware Provider: unified-edge/scenario-1.md
+      - Scenario 2 - Nutanix Cluster Deployment with AHV or ESX Hypervisor: unified-edge/scenario-2.md
+      - Scenario 3 - Initial Cluster Configuration: unified-edge/scenario-3.md
+      - Scenario 4 - Witness VM Installation and configuration (Optional): unified-edge/scenario-4.md
