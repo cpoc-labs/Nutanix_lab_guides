@@ -59,13 +59,19 @@ Go to Health, click Actions, and select Run NCC Checks.
   ![Screenshot](images/scenario-4-08.png)
   ![Screenshot](images/scenario-4-09.png)
 
-## Deploy and Register Cluster with Prism Central
 
-These instructions assume the Prism Central
-instance or cluster used to deploy the Nutanix
-cluster will also be the one used long-term for
-management. If not, deploy a new Prism Central
-instance or cluster on the new Nutanix cluster, then
-register that cluster with the Prism Central instance
-running on itself.
+# Create Subnet
 
+Select Settings at the top from the dropdown menu, then click on Network configuration, click on Create Subnet
+
+  ![Screenshot](images/scenario-4-10.png)
+
+Fill the data and save, for Subnet name use VM_Network, keep vs0 and add a vlan 10
+
+  ![Screenshot](images/scenario-4-11.png)
+
+
+
+      Scenario 4 is optional, please jump to scenario 5
+
+  
