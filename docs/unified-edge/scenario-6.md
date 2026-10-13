@@ -1,4 +1,4 @@
-# View and Monitor Nutanix Clusters in Cisco Intersight
+# Scenario 6 View and Monitor Nutanix Clusters in Cisco Intersight
 
 A new menu item for Nutanix Clusters will appear on the left, which will contain links to the Prism Central
 instance that was just claimed and all the clusters managed by that Prism Central instance.

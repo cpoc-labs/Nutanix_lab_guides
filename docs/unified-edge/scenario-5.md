@@ -1,4 +1,4 @@
-# Deploy and Register Cluster with Prism Central
+# Scenario 5 Deploy and Register Cluster with Prism Central
 
 These instructions assume the Prism Central
 instance or cluster used to deploy the Nutanix
