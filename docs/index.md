@@ -143,7 +143,7 @@ Step-by-step Customer Proof of Concept lab guides for deploying Nutanix hypercon
 
 ## Intersight Unified Edge
 
-<p class="cpoc-desc">A new CPOC guide for Cisco Unified Edge is being drafted. Check back soon for the full set of scenarios.</p>
+<p class="cpoc-desc">Deploy and operate Nutanix on Cisco Unified Edge, compact, cloud-managed compute built for distributed edge sites, all managed centrally through Intersight.</p>
 
 <div class="cpoc-btn-row" markdown>
 [Start the Unified Edge →](unified-edge/index.md){ .cpoc-btn }
