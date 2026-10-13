@@ -54,12 +54,38 @@ Name = Ubuntu VM
 
 vCPU(s)= 2
 Memory = 4
-Disk 1. + Add a New Disk 2. Logical size = 20 3. Click Add 4. Click the pencil of CD-ROM 5. Operation = Clone from Image Service 6. Image = select Ubuntu from the drop down 7. Click Update
-Network Adapters (NIC) 1. + Add New NIC 2. Subnet Name = VMNetwork 3. Click Add
+Select the existing CD-ROm and click on the pen and change the
+Operation = clone from image service
+Image Ubuntu ISO
+CLick Update
+
++ Add New Disk
+
+Type DIsk
+Operation =  Allocate on storage container
+Storage container = DS-1
+Logical Size = 20G
+Click Add
+
+Network Adapters (NIC) 
++ Add New NIC 
+Subnet Name = VMNetwork 
+Click Add
 Click Save
-Then Click Table at the top left, next to overview
 
  ![Screenshot](images/scenario-6-9.png)
+
+Then Click Table at the top left, next to overview and Right-click the Ubuntu VM and select Power On
+
+ ![Screenshot](images/scenario-6-10.png)
+
+Right-click the VM again and select Launch Console
+
+ ![Screenshot](images/scenario-6-11.png)
+
+On the VM console, close the Installation window and open a Firefox browser and point to “cisco.com” to test VM usability and connectivity to the Internet.
+
+ ![Screenshot](images/scenario-6-12.png)
 
 ## Cluster Expansion
 
